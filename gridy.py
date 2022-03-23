@@ -12,8 +12,12 @@ for coin in coin_types:
 print(cnt)
 
 # ex3-2(p92)
-n, m, k = map(int, input().split())
-data = list(map(int, input().split()))
+# n, m, k = map(int, input().split())
+# data = list(map(int, input().split()))
+n = 5
+m = 8
+k = 3
+data = [2,4,5,4,6]
 data.sort()
 print(n,m,k,data)
 first = data[n - 1]
@@ -32,3 +36,32 @@ while True:
     m -= 1
 
 print(res)
+
+#ex3-3 (30min)
+n, m = map(int, input().split())
+arr_data = []
+res = []
+for i in range(0,n):
+    data = list(map(int, input().split()))
+    arr_data.append(data)
+    res.append(min(arr_data[i]))
+# print(arr_data)
+print(max(res))
+
+# test = [[7,3,1,8],
+#         [3,3,3,4],]
+#
+# res = []
+# res.append(min(test[0]))
+# res.append(min(test[1]))
+# res.append(min(test[2]))
+# print(res, max(res))
+
+#ex3-3 answer
+n, m = map(int, input().split())
+result = 0
+for i in range(n):
+    data = list(map(int, input().split()))
+    min_value = (min(data))
+    result = max(result, min_value)
+print(result)
