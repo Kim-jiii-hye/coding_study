@@ -47,7 +47,7 @@ for i in range(0,n):
     res.append(min(arr_data[i]))
 # print(arr_data)
 print(max(res))
-
+#--------------------
 # test = [[7,3,1,8],
 #         [3,3,3,4],]
 #
@@ -56,7 +56,7 @@ print(max(res))
 # res.append(min(test[1]))
 # res.append(min(test[2]))
 # print(res, max(res))
-
+#--------------------
 #ex3-3 answer
 n, m = map(int, input().split())
 result = 0
@@ -65,3 +65,18 @@ for i in range(n):
     min_value = (min(data))
     result = max(result, min_value)
 print(result)
+
+#ex3-4 answer
+n, k = map(int, input().split())
+res = 0
+
+while n >= k:
+    while n % k != 0:
+        n -= 1
+        res += 1
+    n //= k
+    res += 1
+while n>1:
+    n -= 1
+    res += 1
+print(res)
